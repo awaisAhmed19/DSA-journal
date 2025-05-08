@@ -1,5 +1,15 @@
-# Ignore compiled executables
+# Ignore compiled executables (Windows)
 *.exe
 
-# Ignore Visual Studio Code folder
+# Ignore compiled executables (Linux/macOS - no extension)
+a.out
+*.out
+*.bin
+*.o
+*.obj
+*.elf
+*/BT  # your compiled binary, if named like that
+BT    # direct match, if binary is named "BT"
+
+# Ignore VS Code folder
 .vscode/
