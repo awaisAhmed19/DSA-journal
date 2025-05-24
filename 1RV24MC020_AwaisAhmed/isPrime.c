@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdbool.h>
 #include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
 
 bool isPrime(int n) {
     if (n <= 1) return false;
@@ -9,10 +9,10 @@ bool isPrime(int n) {
     return true;
 }
 
-int main(){
-  if(isPrime(104729)){
-    printf("isPrime");
-  }else{
-    printf("not Prime");
-  }
+int main() {
+    if (isPrime(104729)) {
+        printf("isPrime");
+    } else {
+        printf("not Prime");
+    }
 }

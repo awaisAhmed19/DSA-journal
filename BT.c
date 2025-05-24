@@ -81,9 +81,9 @@ struct Node** binarytree(int arr[], int size) {
         int right = 2 * i + 2;
         if (left < size) {
             outarr[i]->left = outarr[left];
-            if (right < size) {
-                outarr[i]->right = outarr[right];
-            }
+        }
+        if (right < size) {
+            outarr[i]->right = outarr[right];
         }
     }
     return outarr;
