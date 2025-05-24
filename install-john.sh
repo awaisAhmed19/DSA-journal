@@ -40,10 +40,10 @@ build_john(){
   echo "[+] cloning John the ripper jumbo"
 
   mkdir -p "$INSTALL_DIR"
-  git clone https://github.com/openwall/john.git || (echo "[-] Clone failed" && exit 1)
-  cd john/src
+  git clone https://github.com/openwall/john.git "$INSTALL_DIR"|| (echo "[-] Clone failed" && exit 1)
+  cd $INSTALL_DIR/src
 
-  [ -d john/src ] || { echo "[-] john/src does not exist"; exit 1; }
+  [ -d $INSTALL_DIR/src ] || { echo "[-] john/src does not exist"; exit 1; }
   echo "[+] configuring build...."
   ./configure --prefix="$INSTALL_DIR"
 
@@ -57,11 +57,24 @@ build_john(){
   echo "[+] Done"
 }
 
-add_to_path(){
-  if ! grep -q "$INSTALL_DIR/bin" ~/.bashrc; then
-    echo "export PATH=\"\$PATH:$INSTALL_DIR/bin\"" >> ~/.bashrc
-    echo "[+] Added John the Ripper to PATH. Reload terminal or run: source ~/.bashrc"
+
+ 
+add_to_path() {
+  local profile="$HOME/.bashrc"
+  local path_line="export PATH=\"\$PATH:$INSTALL_DIR/run\""
+  local alias_line="alias john=\"$INSTALL_DIR/run/john\""
+
+  if ! grep -Fxq "$path_line" "$profile"; then
+    echo "$path_line" >> "$profile"
   fi
+
+  if ! grep -Fxq "$alias_line" "$profile"; then
+    echo "$alias_line" >> "$profile"
+  fi
+
+  echo "[+] Added John the Ripper to PATH and alias in $profile."
+  echo "Reloading your terminal or run: source $profile"
+  source ~/.bashrc
 }
 
 install_deps
@@ -69,4 +82,3 @@ build_john
 add_to_path
 
 echo "[+] John the ripper installed and ready to go"
-
