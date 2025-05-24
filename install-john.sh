@@ -57,11 +57,24 @@ build_john(){
   echo "[+] Done"
 }
 
-add_to_path(){
-  if ! grep -q "$INSTALL_DIR/bin" ~/.bashrc; then
-    echo "export PATH=\"\$PATH:$INSTALL_DIR/bin\"" >> ~/.bashrc
-    echo "[+] Added John the Ripper to PATH. Reload terminal or run: source ~/.bashrc"
+
+ 
+add_to_path() {
+  local profile="$HOME/.bashrc"
+  local path_line="export PATH=\"\$PATH:$INSTALL_DIR/run\""
+  local alias_line="alias john=\"$INSTALL_DIR/run/john\""
+
+  if ! grep -Fxq "$path_line" "$profile"; then
+    echo "$path_line" >> "$profile"
   fi
+
+  if ! grep -Fxq "$alias_line" "$profile"; then
+    echo "$alias_line" >> "$profile"
+  fi
+
+  echo "[+] Added John the Ripper to PATH and alias in $profile."
+  echo "Reloading your terminal or run: source $profile"
+  source ~/.bashrc
 }
 
 install_deps
@@ -69,4 +82,3 @@ build_john
 add_to_path
 
 echo "[+] John the ripper installed and ready to go"
-
