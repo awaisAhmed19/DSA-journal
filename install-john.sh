@@ -40,10 +40,10 @@ build_john(){
   echo "[+] cloning John the ripper jumbo"
 
   mkdir -p "$INSTALL_DIR"
-  git clone https://github.com/openwall/john.git || (echo "[-] Clone failed" && exit 1)
-  cd john/src
+  git clone https://github.com/openwall/john.git "$INSTALL_DIR" || (echo "[-] Clone failed" && exit 1)
+  cd $INSTALL_DIR/src
 
-  [ -d john/src ] || { echo "[-] john/src does not exist"; exit 1; }
+  [ -d $INSTALL_DIR/src ] || { echo "[-] john/src does not exist"; exit 1; }
   echo "[+] configuring build...."
   ./configure --prefix="$INSTALL_DIR"
 
