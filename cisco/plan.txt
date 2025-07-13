@@ -1,0 +1,145 @@
+
+EXAM STRUCTURE — 60 MINUTES
+Section	Questions	Topics Covered (Confirmed)	You Attempt?
+Section 1	30	Digital Logic, Microprocessors, Comp Arch (ALL DO THIS)	✅ Required
+Section 2	30	C, DS, OS, Compilers – You (Software student)	✅ Required
+Section 3	30	Hardware – No info, for electronics people	❌ Skip
+
+🧩 SECTION 1 FOCUS — COMPULSORY (EASY-MEDIUM)
+📌 Topics to Master:
+Digital Logic Design
+Flip-flops (T, D, JK), SR behavior
+Boolean logic simplification
+2’s complement & number representation
+Microprocessors (8085)
+Opcode basics, flag registers, addressing modes
+Computer Architecture
+Virtual memory
+Memory sizing: size = 2^address_bits × word_size
+Formal Method
+What is Hoare logic, pre/post conditions (1 question, just concept)
+
+👨‍💻 SECTION 2 — SOFTWARE (CORE FOR YOU)
+📌 Topics to Dominate:
+1. C Programming (Major weightage)
+sizeof() without using sizeof (pointer arithmetic trick)
+Bitwise ops: Set nth bit, toggle, check
+Static vs extern vs global scope
+union memory size rules
+Struct memory padding/boundary alignment
+Macro definitions (especially tricky ones)
+Dangling pointers, memory leaks
+
+2. Data Structures (Most weightage)
+Reversing a linked list (do it blindfolded)
+Tree traversals (pre/in/post)
+Balanced vs Full vs Complete Binary Trees
+Stack vs Queue use cases
+Which DS fits best for: recursion, job scheduling, undo functionality
+Sorting: Bubble, Merge, Quick — time/space complexity
+Searching: Binary, Hashing basics
+
+3. Operating Systems
+User vs Kernel space
+Real-time OS vs Traditional OS
+Process vs Thread
+Signals and interrupts
+Scheduling algorithms basics (FCFS, RR, SJF)
+
+4. Compilers
+Phases of compilation
+Lexical analysis
+Intermediate code generation basics
+
+🔍 INTERVIEW PREP — 25-30 MINUTES
+🔥 High-Yield Interview Questions:
+⚙️ C Questions
+sizeof() trick without using sizeof → (int*)0 + 1
+Macro to set nth bit: #define SET_BIT(x, n) ((x) | (1 << n))
+extern with static conflict → Not possible, static is file-level
+Union size? → Largest member decides size
+Structure alignment/padding (e.g., why int after char wastes space)
+
+🌲 Data Structures
+Reverse a linked list (dry run it on paper)
+What is a balanced binary tree? AVL? Red-Black?
+In-order traversal gives sorted output for BST?
+Space/time complexity for common operations
+
+🖥️ OS
+User space vs kernel space memory access
+Real-time OS: deterministic, time-bound response
+Signal vs interrupt
+Page faults, segmentation, context switching
+
+🌐 Networking
+Sliding window protocol (draw the flow diagram!)
+TCP vs IP (TCP = transport, reliable; IP = routing, unreliable)
+
+💬 Bonus:
+Project Talk: Be able to explain your project in 2 mins with:
+Problem → Approach → Tech stack → What you did → Outcome
+Add 1 challenge you overcame, and 1 thing you’d improve
+
+📋 RECAP CHECKLIST (YOUR CISCO TODOs)
+☑️ Section 1
+ Digital Logic: flip-flops, number systems, 2's comp
+ Microprocessor 8085: basics
+ Arch: memory size calc, virtual memory
+ 1 Formal methods concept
+
+☑️ Section 2
+ C basics, macros, memory layout, bitwise ops
+ DS: Trees, LL, arrays, stacks/queues, sorting/searching
+ OS: Kernel/user space, schedulers, RTOS, interrupts
+ Compiler phases
+
+☑️ Interview
+ Project 2-min pitch
+ Reverse linked list (code)
+ Set bit macro (code)
+ Signal vs interrupt
+ Sliding window protocol
+
+ TCP vs IP
+ What is a union and how it's stored
+ Practice mock Q&A with a friend or me 👋
+
+
+🧾 Resources to Prep From
+Topic	Resource Link
+C + DS MCQs	GeeksforGeeks C Quiz
+OS + CN	Gate Overflow or GeeksforGeeks CN/OS Quizzes
+Architecture	Neso Academy YT or QuickRef PDF
+Microprocessor	NPTEL 8085 videos / 1-pagers
+Formal Methods	Just basic notes from any SE course
+Tree reversal	Leetcode, but write it on paper
+Bit Tricks	Bit Manipulation in C
+
+🧨 Ready for the Deep Prep Drop?
+Want me to generate:
+MCQ flashcards
+Practice test sheet
+QuickRef PDFs
+
+Interview Q&A template?
+Say the word and I’ll throw 'em your way like ninja stars.
+
+✊ TL;DR:
+Focus Zones:
+
+C + Data Structures (60% of your success lies here)
+Digital Logic & Architecture
+Interview quick recall
+Cisco's not looking for perfect coders. They want people who can think clearly, explain confidently, and code cleanly.
+You're already doing hackathons, cybersec, and IoT. Just package that with clarity, and you’ll walk out of that room like:
+“Yes. I am the candidate you're looking for.” 💼💣
+Let me know how fast you want to start revision. We can build a 7-day power-plan if you’re down.
+
+
+
+
+
+
+
+

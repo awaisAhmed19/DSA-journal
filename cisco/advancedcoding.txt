@@ -1,0 +1,74 @@
+Important for Cisco MCQs & coding rounds:
+✅ Find common elements in three sorted arrays
+✅ Closest pair in sorted array / two sorted arrays
+✅ Count 1’s in a sorted binary array (binary search variant)
+✅ Sort array in wave form
+✅ Search in almost sorted array (binary search with nearby swaps)
+
+🧠 Dynamic Programming (DP) – The Real MVP
+You gotta own this section—they love DP:
+✅ 0-1 Knapsack
+✅ Matrix Chain Multiplication
+✅ Longest Common Subsequence / Substring
+✅ Longest Palindromic Subsequence / Substring
+✅ Coin Change Problem
+✅ Edit Distance
+✅ Egg Dropping Puzzle
+✅ Partition Problem / Subset Sum
+✅ Rod Cutting
+✅ Min Cost Path
+✅ Fibonacci (classic DP base)
+✅ Count Binary Strings Without Consecutive Ones
+✅ Ugly Numbers
+✅ Longest Bitonic Subsequence
+✅ Max Sum Increasing Subsequence
+✅ Min Jumps to End
+✅ Max Size Sub-matrix with all 1s
+✅ Tiling Problem
+✅ Ways to reach nth stair
+
+⚡ Tip: Cisco cares more about “can you model the problem right?” than just code.
+
+📊 Greedy Algorithms
+If they skip DP, they ask greedy. Be ready with:
+
+✅ Fractional Knapsack
+✅ Activity Selection
+✅ Job Sequencing
+✅ Min Time to Finish All Jobs
+✅ Maximize sum of abs differences
+✅ Lexicographically smallest/largest array via swaps
+
+🔡 Misc Concepts to Know Cold
+✅ Tabulation vs Memoization (DP styles)
+✅ Optimal Substructure & Overlapping Subproblems
+✅ How to solve a DP Problem (core idea: break, relate, memoize)
+✅ Count ways to reach a score
+✅ Partition into two subarrays
+✅ GCD + Array Operations
+
+🧬 Trie Data Structure
+✅ Basic structure + implementation
+✅ Phone directory simulation (search prefix-wise)
+
+🧩 INTERVIEW CONNECTIONS
+Here’s how this maps to the Cisco Interview Round:
+
+Topic	Asked?	Examples
+Reverse Linked List	✅ Yes	Must code on paper
+Balanced Binary Tree	✅ Yes	Theory + Code
+Bitwise Macro	✅ Yes	Set nth bit
+Memory Alignment (Struct)	✅ Yes	Static/global scope Qs
+Sliding Window Protocol	✅ Yes	Explain + draw
+TCP/IP Differences	✅ Yes	Simple but tricky wording
+
+🧰 TL;DR – Your Prep Buckets (Do These)
+🗂️ Daily Breakdown Suggestion (7 Days)
+Time	Topic Type	What to Do
+1 hr	C Programming + Bit Ops	Macros, size tricks, pointers
+1 hr	Data Structures	Trees, LL, Stacks, Queues
+1 hr	Searching/Sorting	Binary variations + logic
+1 hr	DP + Greedy	One new prob/day from list
+1 hr	MCQs + Revisions	GFG quizzes, notes
+1 hr	Interview Prep	Dry run Qs, explain aloud
+
