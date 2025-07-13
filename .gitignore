@@ -1,6 +1,6 @@
 # Ignore compiled executables (Windows)
 *.exe
-
+*.pdf
 # Ignore compiled executables (Linux/macOS - no extension)
 a.out
 *.out
