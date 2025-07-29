@@ -13,3 +13,4 @@ BT    # direct match, if binary is named "BT"
 
 # Ignore VS Code folder
 .vscode/
+*.pdf
