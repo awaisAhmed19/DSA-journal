@@ -1,7 +1,7 @@
 public class Median_leet{
        public double findMedianSortedArrays(int[] nums1, int[] nums2) {
                 int[] output=new int[nums1.length+nums2.length];
-        
+
         int size=output.length;
         int i=0;
         int j=0;
@@ -25,11 +25,11 @@ public class Median_leet{
     }
         if(output.length%2==0){
             int mid=(output.length-1)/2;
-            return (double)(output[mid]+output[mid+1])/2; 
+            return (double)(output[mid]+output[mid+1])/2;
         }
         return (double)(output[(output.length-1)/2]);
 
-    }    
+    }
   public static void main(String args[]){
     Median_leet m=new Median_leet();
     int[] nums1={2,2,2,2,2,2,22};
