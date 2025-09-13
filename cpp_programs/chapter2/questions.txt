@@ -1,0 +1,57 @@
+🌱 Level 1: Basics (Warm-up)
+Start here to get comfy with tree fundamentals.
+Build a binary tree (manual linking or via insert).
+Preorder, Inorder, Postorder traversal (recursive).
+Level order traversal (BFS).
+Find height / depth of a tree.
+Count total nodes.
+Count leaf nodes.
+Mirror (invert) a tree.
+
+🌿 Level 2: Intermediate
+Now start flexing some logic & recursion muscles.
+Diameter of a binary tree.
+Lowest Common Ancestor (LCA).
+Maximum depth vs Minimum depth.
+Check if a tree is balanced (height-balanced).
+Check if a tree is symmetric.
+Path sum problems (e.g., does a path exist with sum X?).
+Print all root-to-leaf paths.
+Convert binary tree to doubly linked list (inorder fashion).
+
+🌲 Level 3: Binary Search Tree (BST) Focus
+BSTs are must-know.
+Insert into BST.
+Search in BST.
+Delete node from BST.
+Validate if a binary tree is a BST.
+Find min and max in BST.
+Inorder Successor / Predecessor in BST.
+Kth smallest / largest element in BST.
+Range sum in BST.
+Convert sorted array to BST.
+
+🌳 Level 4: Advanced Patterns
+Time for the brain gains.
+Serialize & Deserialize a binary tree.
+Construct tree from preorder + inorder traversal.
+Construct tree from postorder + inorder traversal.
+Vertical order traversal.
+Boundary traversal of a tree.
+Zigzag (spiral) level order traversal.
+Maximum path sum in a binary tree.
+Distance between two nodes in a tree.
+Flatten binary tree to linked list (LeetCode style).
+
+🌋 Level 5: Expert / Interview-Killer Mode
+These will separate you from casuals.
+Morris Traversal (inorder without recursion/stack).
+Segment Trees (range queries like sum/min/max).
+Fenwick Tree / Binary Indexed Tree.
+AVL Trees (rotations, balancing).
+Red-Black Trees (conceptual mostly, few coding).
+Trie (prefix tree for strings).
+N-ary tree traversals.
+Tree DP problems (e.g., maximum independent set in a tree).
+Euler Tour of a tree.
+Heavy-Light Decomposition (HLD).

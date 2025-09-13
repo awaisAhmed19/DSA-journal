@@ -1,0 +1,42 @@
+Acko SDET Intern — DSA Must-Practice
+1. Arrays & Searching
+✅ Find minimum in a rotated sorted array
+✅ Search an element in a rotated sorted array (binary search variant)
+✅ Find 1st and 2nd largest elements in an array
+✅ Kadane’s Algorithm – maximum subarray sum
+✅ Rotate an array by k steps (cyclic rotation)
+✅ Prefix/Suffix sums problems (range queries, subarray sums)
+✅ Dutch National Flag problem (sort 0s,1s,2s)
+
+2. Strings
+✅ Reverse a string in-place
+✅ Check if two strings are anagrams
+✅ Longest substring without repeating characters (sliding window)
+✅ Palindrome check (normal + after removing characters)
+✅ String compression / run-length encoding
+
+3. Linked List
+✅ Create and traverse a linked list
+✅ Reverse a linked list (iterative + recursive)
+✅ Detect a cycle (Floyd’s Tortoise & Hare)
+✅ Find the start of a cycle (extension of Floyd’s)
+✅ Merge two sorted linked lists
+✅ Sort a linked list (merge sort approach)
+
+4. Stacks & Queues
+✅ Implement a stack using arrays/linked list
+✅ Implement a queue / circular queue
+✅ Balanced Parentheses problem (stack)
+✅ Next Greater Element (NGE)
+
+5. Trees & Graphs (lightweight, but good to know)
+✅ Level-order traversal (BFS)
+✅ Depth-first traversal (DFS)
+✅ Lowest Common Ancestor (basic binary tree)
+✅ Detect cycle in an undirected graph
+
+6. Core Concepts They Love to Slip In
+✅ Time/Space Complexity analysis
+✅ Edge cases: empty input, invalid values, big input sizes
+✅ Concurrency basics (deadlock, race condition — theory side)
+✅ SQL-style data filtering (joins, group by, counts — not code heavy)
