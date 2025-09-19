@@ -7,6 +7,7 @@ struct NQueens {
     const size_t queens = 8;
     const size_t ROWS = queens;
     const size_t COLS = queens;
+
     int** create_board() {
         int** board = new int*[ROWS];
         for (int i = 0; i < ROWS; i++) {
