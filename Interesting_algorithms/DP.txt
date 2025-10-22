@@ -1,0 +1,47 @@
+dp list
+
+1️⃣ Basic/Classic DP
+1. Fibonacci Sequence – recursive → memoization → tabulation
+2. Climbing Stairs – variations of Fibonacci
+3. Factorial with DP – just practicing memoization
+4. Minimum Cost Path – grid DP
+5. Coin Change I – number of ways to make change
+6. Coin Change II – minimum coins to make a value
+7. 0/1 Knapsack – classic weight/value problem
+8. Subset Sum Problem – target sum existence
+9. Count Subsets with Given Sum
+10. Longest Common Subsequence (LCS)
+11. Longest Common Substring
+12. Edit Distance / Levenshtein Distance
+
+2️⃣ Intermediate DP
+1. 
+2. Longest Increasing Subsequence (LIS)
+3. Longest Decreasing Subsequence
+4. Maximum Sum Increasing Subsequence
+5. Matrix Chain Multiplication
+6. Egg Dropping Problem
+7. Palindromic Substrings
+8. Palindrome Partitioning
+9. Rod Cutting Problem
+10. Partition Equal Subset Sum
+11. Friends Pairing Problem
+12. Burst Balloons
+13. Unique Paths in a Grid
+14. Minimum Path Sum in a Grid
+
+3️⃣ Advanced/Challenging DP
+DP on Trees – subtree sums, diameter, etc.
+DP on Graphs – shortest paths, counting paths
+Bitmask DP – Traveling Salesman Problem (TSP), subset problems
+DP with Strings – regex matching, wildcard matching
+Weighted Interval Scheduling / Job Scheduling
+Maximum Profit in Job Scheduling
+Palindrome Removal
+Dice Throw Problem
+Optimal Strategy for a Game (Pick Ends)
+Number of Ways to Tile a Board (Domino/Polyomino)
+Knuth Optimization / Convex Hull Trick DP – advanced optimization
+DP with Digit Masks / Counting Numbers with Constraints
+Stock Buy & Sell Variants – with cooldown, k-transactions, fees
+Minimum Cost to Merge Stones / Slimes Problem
