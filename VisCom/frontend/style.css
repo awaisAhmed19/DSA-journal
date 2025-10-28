@@ -1,0 +1,340 @@
+/* === Basic Reset & Base Styles === */
+:root {
+  --primary-color: #3b82f6;
+  /* Blue for primary actions */
+  --secondary-color: #6366f1;
+  /* Indigo for secondary actions */
+  --tertiary-color: #9ca3af;
+  /* Gray for clear */
+  --background-color: #f9fafb;
+  /* Light gray background */
+  --card-background: #ffffff;
+  /* White cards */
+  --text-color: #1f2937;
+  --border-color: #e5e7eb;
+  --error-color: #d32f2f;
+  --success-color: #0b6e4f;
+  --font-family: 'Poppins', sans-serif;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+/* === Header === */
+.header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* === Main Layout === */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1.2fr 1fr;
+    /* Form slightly wider than preview */
+  }
+}
+
+/* === Form Section Styling === */
+.form-section h2,
+.preview-section h2 {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.form-group-card {
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-background);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group-card legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  /* Light primary glow */
+}
+
+/* Dynamic Group Styling (e.g., Work Item) */
+.dynamic-group {
+  border: 1px dashed var(--border-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.dynamic-group .group-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--error-color);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.remove-btn:hover {
+  background-color: rgba(211, 47, 47, 0.1);
+}
+
+.add-item-btn {
+  background-color: transparent;
+  border: 1px dashed var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.add-item-btn:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+/* === Status and Action Buttons === */
+.form-actions {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.sticky-actions {
+  /* If you want the buttons to stick to the bottom of the viewport on scroll */
+  /* position: sticky; */
+  /* bottom: 0; */
+  /* background-color: var(--card-background); */
+  /* padding: 1rem 0; */
+  /* z-index: 10; */
+  /* box-shadow: 0 -2px 5px rgba(0,0,0,0.05); */
+}
+
+.status-message {
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid;
+}
+
+/* Specific colors set in JS, but here are the defaults */
+.status-message[style*="d32f2f"] {
+  /* Error color */
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: var(--error-color) !important;
+}
+
+.status-message[style*="0b6e4f"] {
+  /* Success color */
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+  color: var(--success-color) !important;
+}
+
+.visually-hidden {
+  display: none !important;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s, transform 0.1s;
+  text-decoration: none;
+  /* For download link */
+  text-align: center;
+  flex-grow: 1;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn.primary:hover:not(:disabled) {
+  background-color: #2563eb;
+  /* Darker primary */
+}
+
+.btn.secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn.secondary:hover:not(:disabled) {
+  background-color: #4f46e5;
+  /* Darker secondary */
+}
+
+.btn.tertiary {
+  background-color: var(--tertiary-color);
+  color: white;
+}
+
+.btn.tertiary:hover:not(:disabled) {
+  background-color: #6b7280;
+  /* Darker tertiary */
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* === PDF Preview Section === */
+.preview-section {
+  position: sticky;
+  top: 20px;
+  /* Sticks the preview near the top of the viewport */
+  height: 100vh;
+  /* Make it visually fill the screen height */
+}
+
+.pdf-container {
+  height: calc(100vh - 250px);
+  /* Adjust height relative to viewport */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  /* PDF background */
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.no-preview-text {
+  color: var(--tertiary-color);
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+.download-btn {
+  width: 100%;
+  /* Override flex-grow for download button to be full width */
+  flex-grow: initial;
+}
+
+.download-btn.disabled {
+  background-color: var(--tertiary-color);
+  cursor: not-allowed;
+  pointer-events: none;
+  /* Ensure it cannot be clicked */
+}
+
+/* Log output for errors */
+pre.log {
+  white-space: pre-wrap;
+  background-color: #1f2937;
+  color: #fecaca;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+}

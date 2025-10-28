@@ -1,0 +1,106 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[unicode, draft=false]{hyperref}
+\usepackage{fontawesome5}
+
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\newenvironment{jobshort}[2]{
+  \begin{tabularx}{\linewidth}{@{}l X r@{}}
+  \textbf{#1} & \hfill & #2 \\[3.75pt]
+  \end{tabularx}
+}{
+}
+
+\newenvironment{joblong}[2]{
+  \begin{tabularx}{\linewidth}{@{}l X r@{}}
+  \textbf{#1} & \hfill & #2 \\[3.75pt]
+  \end{tabularx}
+  \begin{minipage}[t]{\linewidth}
+  \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt,label=--]
+}{
+  \end{itemize}
+  \end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	HEADER
+%----------------------------------------------------------------------------------------
+\begin{tabularx}{\linewidth}{@{}C@{}}
+\Huge{\textbf{<<NAME>>}}\\[7.5pt]
+\href{<<GITHUB_URL>>}{\raisebox{-0.05\height}\faGithub\ <<GITHUB_USERNAME>>} \ $|$ \ 
+\href{<<LINKEDIN_URL>>}{\raisebox{-0.05\height}\faLinkedin\ <<LINKEDIN_NAME>>} \ $|$ \ 
+\href{mailto:<<EMAIL>>}{\raisebox{-0.05\height}\faEnvelope\ <<EMAIL>>} \ $|$ \ 
+\href{tel:<<PHONE>>}{\raisebox{-0.05\height}\faMobile\ <<PHONE>>}\\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Summary}
+<<SUMMARY>>
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+<<WORK_EXPERIENCE_BLOCKS>>
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+<<PROJECT_BLOCKS>>
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEERING
+%----------------------------------------------------------------------------------------
+\section{Volunteering}
+<<VOLUNTEERING_BLOCKS>>
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+<<EDUCATION_BLOCKS>>
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+<<SKILLS_BLOCKS>>
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}

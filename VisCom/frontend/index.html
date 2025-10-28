@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Resume Generator</h1>
+    <p>Fill out your details to generate a PDF resume.</p>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Your Details</h2>
+      <form id="resumeForm" class="resume-form">
+
+        <fieldset class="form-group-card">
+          <legend>Personal Information</legend>
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="john.doe@example.com" required>
+          </div>
+          <div class="input-group">
+            <label for="summary">Professional Summary</label>
+            <textarea id="summary" rows="4" placeholder="A concise statement about your skills and goals."></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group-card">
+          <legend>Skills (Comma-Separated)</legend>
+          <div class="input-group">
+            <label for="skills">Technical & Soft Skills</label>
+            <input type="text" id="skills" placeholder="JavaScript, React, Figma, Problem Solving">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group-card">
+          <legend>Work Experience</legend>
+
+          <div class="work-item dynamic-group">
+            <p class="group-title">Job #1 <button type="button" class="remove-btn">Remove</button></p>
+            <div class="input-group">
+              <label for="work-company-1">Company</label>
+              <input type="text" id="work-company-1" data-field="company" placeholder="TechCorp Inc.">
+            </div>
+            <div class="input-group">
+              <label for="work-title-1">Job Title</label>
+              <input type="text" id="work-title-1" data-field="title" placeholder="Software Engineer">
+            </div>
+            <div class="input-group">
+              <label for="work-desc-1">Description</label>
+              <textarea id="work-desc-1" data-field="description" rows="3"
+                placeholder="Key achievements and responsibilities."></textarea>
+            </div>
+          </div>
+
+          <button type="button" class="add-item-btn" data-group="work-item">+ Add Work Experience</button>
+        </fieldset>
+
+        <fieldset class="form-group-card">
+          <legend>Projects</legend>
+          <button type="button" class="add-item-btn" data-group="project-item">+ Add Project</button>
+        </fieldset>
+
+        <fieldset class="form-group-card">
+          <legend>Education</legend>
+          <button type="button" class="add-item-btn" data-group="education-item">+ Add Education</button>
+        </fieldset>
+
+        <fieldset class="form-group-card">
+          <legend>Volunteering</legend>
+          <button type="button" class="add-item-btn" data-group="volunteer-item">+ Add Volunteering</button>
+        </fieldset>
+
+
+        <div class="form-actions sticky-actions">
+          <p id="status" class="status-message visually-hidden" aria-live="polite"></p>
+
+          <div class="button-group">
+            <button type="submit" id="generateBtn" class="btn primary">Generate & Compile</button>
+            <button type="button" id="regenBtn" class="btn secondary">Regenerate</button>
+            <button type="button" id="clearBtn" class="btn tertiary">Clear Form</button>
+          </div>
+        </div>
+
+      </form>
+    </section>
+
+    <section class="preview-section">
+      <h2>PDF Preview</h2>
+
+      <div class="pdf-container">
+        <p id="noPreview" class="no-preview-text">Fill the form and click "Generate & Compile" to see your resume
+          preview here.</p>
+        <iframe id="pdfPreview" class="pdf-iframe" style="display: none;"></iframe>
+      </div>
+
+      <a href="#" id="downloadLink" class="btn disabled download-btn" download="Resume.pdf">
+        Download PDF
+      </a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
