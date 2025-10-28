@@ -10,7 +10,7 @@ a.out
 *.elf
 */BT  # your compiled binary, if named like that
 BT    # direct match, if binary is named "BT"
-
+.env
 # Ignore VS Code folder
 .vscode/
 *.pdf
